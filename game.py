@@ -42,7 +42,7 @@ enemy_x = random.randint(0, screen_width)
 enemy_y = random.randint(0, screen_height)
 enemy_speed = 0.04
 enemy_size = 40
-enemy_image = pygame.image.load('enemy.png')
+enemy_image = pygame.image.load('amg1_fr1.gif')
 enemy_image = pygame.transform.scale(enemy_image, (enemy_size, enemy_size))
 
 score = 0
