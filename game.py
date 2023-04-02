@@ -87,15 +87,18 @@ while running:
                         pygame.quit()
                         pygame.mixer.music.stop()
                         quit()
-                    # check if the event in R key
-                    if event.key == pygame.K_r:
-                        # Restart the game
-                        game_state = "playing"
-                        score = 0
-                        # Add your code to reset the game here
-                        break
-                    if event.key == pygame.K_q:
-                        quit()
+                        
+                    #  Making sure we only try to access the 'key' attribute for keyboard events, avoiding the 'AttributeError' that was occurring previously when moving the mouse over after winning the game.    
+                    if event.type == pygame.KEYDOWN:                 
+                    # check if the event in R key 
+                        if event.key == pygame.K_r:
+                            # Restart the game
+                            game_state = "playing"
+                            score = 0
+                            # Add your code to reset the game here
+                            break
+                        if event.key == pygame.K_q:
+                            quit()
                 else:
                     continue
                 break
